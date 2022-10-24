@@ -1,0 +1,12 @@
+//Lista de Exercícios 1
+
+//1. Mostrar uma mensagem na tela com o seu nome.
+//2. Mostrar uma mensagem na tela com a sua matrícula.
+
+using System;
+class MainClass { 
+    public static void Main() { 
+        Console.WriteLine("Cibele");
+        Console.WriteLine("20221014040018");
+    }
+}
