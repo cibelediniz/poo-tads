@@ -57,3 +57,21 @@ class MainClass {
         Console.WriteLine($"Área = {b*h:0.00} - Perímetro = {b*2+h*2:0.00} - Diagonal = {Math.Sqrt(Math.Pow(b,2)+Math.Pow(h,2)):0.00}");
     }
 }
+
+
+//5. Calcular a distância, em quilômetros, percorrida pela luz em um intervalo de tempo no formato “HH:MM:SS”.
+//Considerar a velocidade de luz como 300 mil km/s.
+
+using System;
+
+class DistKm { 
+    public static void Main() { 
+        Console.WriteLine("Digite o intervalo de tempo no formato “HH:MM:SS”");
+        
+        string[] hms = Console.ReadLine().Split(":"); //array
+        uint h = uint.Parse(hms[0]), m = uint.Parse(hms[1]), s = uint.Parse(hms[2]); //partes do array
+        m = m + (h*60); //ou m += h*60
+        s = s + (m*60); //ou s += m*60
+        Console.WriteLine($"A luz percorreu {300000*s} km nesse intervalo");
+    }
+}
