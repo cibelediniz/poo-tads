@@ -124,25 +124,21 @@ class Cedls {
 }
 
 
-// URI 2377 - Pedágio
-
 using System;
+using System.Linq;
+
 class Pedagio {
     public static void Main() {
         
+        int[] linha1 = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        int[] linha2 = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        
         int km, pedagios, custo_p, custo_t, l, d, k, p;
-        string linha1, linha2;
 
-        linha1 = Console.ReadLine();
-        linha2 = Console.ReadLine();
-
-        string[] i = linha1.Split(' ');
-        string[] j = linha2.Split(' ');
-
-        l = int.Parse(i[0]);
-        d = int.Parse(i[1]);
-        k = int.Parse(j[0]);
-        p = int.Parse(j[1]);
+        l = linha1[0];
+        d = linha1[1];
+        k = linha2[0];
+        p = linha2[1];;
         
         km = k * l;
         pedagios = l/d;
