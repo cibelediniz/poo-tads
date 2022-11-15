@@ -1,0 +1,45 @@
+//URI 1009 – Salário com Bônus
+
+using System;
+
+class SalBonus { 
+    public static void Main() { 
+        string nome = Console.ReadLine();
+        double salario = double.Parse(Console.ReadLine());
+        double vendas = double.Parse(Console.ReadLine());
+
+        double total = salario + vendas * 0.15;
+        
+        Console.WriteLine($"TOTAL = R$ {total:0.00}");
+    }
+}
+
+
+// URI 1013 – O Maior
+
+using System;
+using System.Linq;
+
+class OMaior {
+  static void Main() {
+    
+    int a, b, c, maior;
+    int[] nums =  Console.ReadLine().Split().Select(int.Parse).ToArray();
+    
+    a = nums[0];
+    b = nums[1];
+    c = nums[2];
+    maior = a;
+    
+    if (b > maior && b > c) {
+        Console.WriteLine($"{b} eh o maior");
+    }
+    
+    else if (c > maior && c > b) {
+        Console.WriteLine($"{c} eh o maior");
+    }
+    else{
+        Console.WriteLine($"{a} eh o maior");
+    }
+  }
+}
